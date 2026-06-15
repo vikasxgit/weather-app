@@ -28,35 +28,11 @@ async function getWeather() {
             throw new Error(data.error.message);
         }
 
-        document.getElementById("temperature").textContent =
-            Math.round(data.current.temp_c) + "°C";
-
-        document.getElementById("city").textContent =
-            data.location.name;
-
-        document.getElementById("condition").textContent =
-            data.current.condition.text;
-
-        document.getElementById("localTime").textContent =
-            data.location.localtime;
-
-        document.getElementById("weatherIcon").src =
-            "https:" + data.current.condition.icon;
-
-        document.getElementById("feelsLike").textContent =
-            Math.round(data.current.feelslike_c) + "°C";
-
-        document.getElementById("wind").textContent =
-            data.current.wind_kph + " km/h";
-
-        document.getElementById("visibility").textContent =
-            data.current.vis_km + " km";
-
-        document.getElementById("country").textContent =
-            data.location.country;
+        document.getElementById("temperature").textContent = Math.round(data.current.temp_c) + "°C";
+        document.getElementById("city").textContent = data.location.name;
+        document.getElementById("condition").textContent = data.current.condition.text;
 
         weather.style.display = "block";
-
         updateBackground(data.current.condition.text);
 
     } catch (err) {

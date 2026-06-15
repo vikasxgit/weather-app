@@ -209,42 +209,6 @@ body {
     font-size: .9rem;
 }
 
-.stats {    
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.stat-card {
-    background: rgba(255, 255, 255, .07);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, .08);
-    border-radius: 22px;
-    padding: 20px;
-    transition: .3s ease;
-}
-
-.stat-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, .12);
-
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, .15);
-}
-
-.stat-card span {
-    display: block;
-    margin-bottom: 8px;
-    color: #94a3b8;
-    font-size: .9rem;
-}
-
-.stat-card h3 {
-    font-size: 1.15rem;
-    font-weight: 600;
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -268,10 +232,6 @@ body {
 
     .city {
         font-size: 1.4rem;
-    }
-
-    .stats {
-        gap: 10px;
     }
 
     .search-box button {
