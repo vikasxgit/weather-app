@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather-x</title>
+
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" 
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="weather-card">
+
+            <div class="title">
+                <h1>☁️ Weather Application</h1>
+                <h3>Made with ❤️ | <a href="https://vikasxgit.github.io/portfolio/" style="color: white; text-decoration: none;">Vikas</a></h3>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="cityInput" placeholder="Enter city name">
+                <button onclick="getWeather()">Search</button>
+            </div>
+
+            <div class="loading" id="loading">Loading weather...</div>
+            <div class="error" id="error">City not found. Please try again.</div>
+
+            <div class="weather" id="weather">
+                <img id="weatherIcon" alt="Weather Icon">
+                <div class="temperature" id="temperature"> --°C</div>
+                <div class="city" id="city">City Name</div>
+                <div class="condition" id="condition">Weather Condition</div>
+                <div class="local-time" id="localTime">Local Time</div>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <span>Feels Like</span>
+                        <h3 id="feelsLike">--°C</h3>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>Wind Speed</span>
+                        <h3 id="wind">-- km/h</h3>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>Visibility</span>
+                        <h3 id="visibility">-- km</h3>
+                    </div>
+
+                    <div class="stat-card">
+                        <span>Country</span>
+                        <h3 id="country">--</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
